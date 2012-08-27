@@ -673,7 +673,7 @@ restclient.main = {
     restclient.log(attrName);
     if(attrName.toLowerCase() === 'authorization') {
       //OAuth 2.0
-      if(attrValue.toLowerCase().indexOf('oauth2 ') === 0) {
+      if(attrValue.indexOf('Bearer ') === 0) {
         var oauth2 = header.attr('oauth2');
         try{
           oauth2 = JSON.parse(oauth2);
